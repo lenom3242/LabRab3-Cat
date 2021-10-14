@@ -20,7 +20,7 @@ public:
 	Cat(string newname, string newcolour, string newgender, int newage) :
 		name(newname), colour(newcolour), gender(newgender), age(newage){}
 	Cat(const Cat& obj) : name(obj.name), colour(obj.colour), gender(obj.gender), age(obj.age) {}
-	~Cat() {cout << "Cat" << name << " is deleted" << endl;}
+	~Cat() {cout << "Cat " << name << " is deleted" << endl;}
 };
 void main()
 {
@@ -31,5 +31,6 @@ void main()
 	Cat matros2 = matros;
 	matros2.showinfo();
 	Cat* pcat = new Cat;
+	pcat->showinfo();
 	delete pcat;
 }
